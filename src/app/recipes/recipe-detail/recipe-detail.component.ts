@@ -16,8 +16,7 @@ export class RecipeDetailComponent implements OnInit{
 
   constructor(private recipeService: RecipeService,
               private shoppingListService: ShoppingListService,
-              private route: ActivatedRoute,
-              private router: Router) { }
+              private route: ActivatedRoute) { }
 
   addToShoppingList() {
     this.shoppingListService.addIngredients(this.recipe.ingredients);

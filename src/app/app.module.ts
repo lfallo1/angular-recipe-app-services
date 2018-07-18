@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -13,6 +13,9 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { DropdownDirective } from './shared/dropdown.directive';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {AppRoutingModule} from './config/app-routing.module';
+import {RecipeDetailEmptyComponent} from './recipes/recipe-detail-empty/recipe-detail-empty.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { GreaterThanZeroDirective } from './shared/directives/greater-than-zero.directive';
 
 @NgModule({
   declarations: [
@@ -25,11 +28,15 @@ import {AppRoutingModule} from './config/app-routing.module';
     ShoppingListComponent,
     ShoppingEditComponent,
     PageNotFoundComponent,
-    DropdownDirective
+    DropdownDirective,
+    RecipeDetailEmptyComponent,
+    RecipeEditComponent,
+    GreaterThanZeroDirective
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],

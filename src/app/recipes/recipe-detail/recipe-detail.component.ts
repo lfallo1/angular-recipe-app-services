@@ -24,11 +24,6 @@ export class RecipeDetailComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.route.data.subscribe(({ recipe }) => {
-      if(!recipe){
-        this.router.navigate(['/']);
-      }
-      this.recipe = recipe;
-    });
+    this.route.data.subscribe(({ recipe }) => this.recipe = recipe);
   }
 }
